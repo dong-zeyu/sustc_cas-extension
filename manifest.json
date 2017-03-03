@@ -19,8 +19,7 @@
 "content_scripts": [
     {
       "matches": ["https://cas.sustc.edu.cn/cas/*", "http://enet.10000.gd.cn:10001/*"],
-      "js": ["content.js"], 
-	  "run_at": "document_end"
+      "js": ["content.js"]
     }
   ]
 }

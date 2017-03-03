@@ -2,7 +2,6 @@ function change(){
 	var user = document.getElementById('username').value;
 	var pass = document.getElementById('password').value;
 	if(user!=''&&pass!=''){
-		console.log(user + "\n" + pass);
 		localStorage.setItem('username', user);
 		localStorage.setItem('password', pass);
 	}
@@ -11,7 +10,6 @@ function change(){
 	document.getElementById('ok').setAttribute('style', 'color:#00EC00;');
 }
 function auto(){
-	console.log(this.checked);
 	localStorage.setItem('autologin', this.checked);
 }
 function load(){
