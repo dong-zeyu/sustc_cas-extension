@@ -1,0 +1,26 @@
+{
+"name": "CAS Login",
+"version": "0.1",
+"manifest_version": 2,
+"description": "Auto login cas",
+"icons": { "128": "icon.png" },
+"permissions": [
+	"https://cas.sustc.edu.cn/", 
+	"http://enet.10000.gd.cn:10001/", 
+	"storage"],
+"browser_action": {
+	"default_title": "CAS Login",
+	"default_icon": "icon.png",
+	"default_popup": "popup.html"
+},
+"background": {
+    "scripts": ["background.js"]
+},
+"content_scripts": [
+    {
+      "matches": ["https://cas.sustc.edu.cn/cas/*", "http://enet.10000.gd.cn:10001/*"],
+      "js": ["content.js"], 
+	  "run_at": "document_end"
+    }
+  ]
+}
