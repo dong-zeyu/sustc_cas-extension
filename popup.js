@@ -5,20 +5,18 @@ function change(){
 		localStorage.setItem('username', user);
 		localStorage.setItem('password', pass);
 	}
-	document.getElementById('username').value = '';
-	document.getElementById('password').value = '';
 	document.getElementById('ok').setAttribute('style', 'color:#00EC00;');
 }
 function auto(){
 	localStorage.setItem('autologin', this.checked);
 }
 function load(){
+	document.getElementById('username').value = localStorage.getItem('username');
+	document.getElementById('password').value = localStorage.getItem('password');
 	if(localStorage.getItem('autologin')=='true')
 		document.getElementById('auto').checked = true;
-	else if(localStorage.getItem('autologin')=='false')
-		document.getElementById('auto').checked = false;
 	else
-		localStorage.setItem('autologin', false);
+		document.getElementById('auto').checked = false;
 }
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('change').addEventListener('click', change);
