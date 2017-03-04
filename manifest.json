@@ -2,7 +2,7 @@
 "name": "CAS Login",
 "version": "0.1",
 "manifest_version": 2,
-"description": "Auto login cas",
+"description": "Auto login cas in SUSTech",
 "icons": { "128": "icon.png" },
 "permissions": [
 	"https://cas.sustc.edu.cn/", 

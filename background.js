@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener(
 	}
 );
 if(localStorage.length!=3){
+	console.log('init...');
 	localStorage.setItem('autologin', false);
 	localStorage.setItem('username', '');
 	localStorage.setItem('password', '');

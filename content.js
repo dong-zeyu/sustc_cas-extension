@@ -3,6 +3,7 @@ if(document.URL.indexOf("https://cas.sustc.edu.cn/cas/login") >= 0 )
 	chrome.runtime.sendMessage({storage: "all"}, function(response) {
 		if(document.getElementById('msg')==null){
 			if(response.auto=='true'){
+				console.log('login...');
 				document.getElementById('username').value = response.username;
 				document.getElementById('password').value = response.password;
 				document.getElementsByName('submit')[0].click();
@@ -11,7 +12,6 @@ if(document.URL.indexOf("https://cas.sustc.edu.cn/cas/login") >= 0 )
 		else{
 			if(document.getElementById('msg').getAttribute('class')=='errors'&&response.auto=='true'){
 				document.getElementById('msg').innerText = '用户名密码错误！请在插件中更新信息并从地址栏刷新页面';
-				
 			}
 		}
 	});
