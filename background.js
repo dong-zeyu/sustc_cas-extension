@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(
 					}
 					else {
 						chrome.tabs.update(tab.id, {
-							url: "https://www.baidu.com/"
+							url: "chrome://newtab"
 						});
 					}
 				});
