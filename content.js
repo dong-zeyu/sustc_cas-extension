@@ -10,7 +10,8 @@ chrome.runtime.sendMessage({command: "storage"}, function(response) {
 
 			}
 			else{
-				if(document.getElementById('msg').getAttribute('class')=='errors'&&response.auto=='true'){
+				if(document.getElementById('msg').getAttribute('class')=='errors'&&
+				document.getElementById('msg').innerText=="认证信息无效。"){
 					document.getElementById('msg').innerText = '用户名密码错误！请在插件中更新信息并从地址栏刷新页面';
 				}
 			}
