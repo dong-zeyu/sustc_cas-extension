@@ -1,6 +1,6 @@
 chrome.runtime.sendMessage({command: "storage"}, function(response) {
 	if(response.auto=='true'){
-		if(document.URL.indexOf("https://cas.sustc.edu.cn/cas/login") >= 0 )   
+		if(document.URL.indexOf("https://cas.sustc.edu.cn/cas/login") >= 0 && document.getElementById('fm1') != null)
 		{
 			if(document.getElementById('fm1').firstElementChild.tagName!="DIV"){
 				console.log('login...');

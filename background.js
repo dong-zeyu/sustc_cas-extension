@@ -1,8 +1,8 @@
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
-		if (request.command == "storage")
+		if(request.command == "storage")
 			sendResponse({username: localStorage.getItem('username'), 
-						password: localStorage.getItem('password'), 
+						password: localStorage.getItem('password'),
 						auto: localStorage.getItem('autologin')});
 		else if(request.command == "close")
 			chrome.tabs.getAllInWindow(function(tab) {
@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener(
 						chrome.tabs.update(target_tab.id, {
 							url: "chrome://newtab"
 						});
-					}			
+					}
 				}
 			});
 	}
