@@ -9,7 +9,7 @@ chrome.runtime.sendMessage({command: "storage"}, function(response) {
 				document.getElementsByName('submit')[0].click();
 			}
 			else{
-				document.getElementById('fm1').firstElementChild.innerText += "    请从插件中更新用户名和密码并刷新页面"
+				document.getElementById('fm1').firstElementChild.innerText += "    请从插件中更新用户名和密码并从地址栏刷新页面"
 			}
 		} else if(document.URL.indexOf("http://enet.10000.gd.cn:10001/sz/sz112/transfer.jsp") >= 0 ) {
 			document.getElementsByTagName('input')[0].click();
