@@ -7,6 +7,7 @@
 "permissions": [
 	"https://cas.sustc.edu.cn/", 
 	"http://enet.10000.gd.cn:10001/", 
+	"http://jwxt.sustc.edu.cn/",
 	"storage",
 	"tabs"],
 "browser_action": {
@@ -19,7 +20,11 @@
 },
 "content_scripts": [
     {
-      "matches": ["https://cas.sustc.edu.cn/cas/*", "http://enet.10000.gd.cn:10001/*"],
+      "matches": [
+	    "https://cas.sustc.edu.cn/cas/*", 
+	    "http://enet.10000.gd.cn:10001/*",
+        "http://jwxt.sustc.edu.cn/*"
+      ],
       "js": ["content.js"]
     }
   ]

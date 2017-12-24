@@ -15,6 +15,15 @@ chrome.runtime.sendMessage({command: "storage"}, function(response) {
 			document.getElementsByTagName('input')[0].click();
 		} else if(document.URL.indexOf("http://enet.10000.gd.cn:10001/sz/sz112/index.jsp") >=0 ){
 			chrome.runtime.sendMessage({command: "close"});
+		} else if(document.URL.indexOf("http://jwxt.sustc.edu.cn/jsxsd/") >=0 ) {
+			var table =  document.getElementById('dataList');
+			if(table != null) {
+				var a = table.getElementsByTagName('a');
+				for(var i = 0; i < a.length; i++) {
+					a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)',.*/, "javascript:open('$1');"));
+				}
+			}
+
 		}
 	}
 });
