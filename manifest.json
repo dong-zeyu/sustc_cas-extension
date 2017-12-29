@@ -1,6 +1,6 @@
 {
 "name": "CAS Login",
-"version": "1.0",
+"version": "1.1",
 "manifest_version": 2,
 "description": "Auto login cas in SUSTech",
 "icons": { "128": "icon.png" },
