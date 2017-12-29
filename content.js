@@ -20,7 +20,7 @@ chrome.runtime.sendMessage({command: "storage"}, function(response) {
 			if(table != null) {
 				var a = table.getElementsByTagName('a');
 				for(var i = 0; i < a.length; i++) {
-					a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)',.*/, "javascript:open('$1');"));
+					a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)'.*/, "javascript:open('$1');"));
 				}
 			}
 
