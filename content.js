@@ -6,6 +6,7 @@ chrome.runtime.sendMessage({command: "storage"}, function(response) {
 				console.log('login...');
 				document.getElementById('username').value = response.username;
 				document.getElementById('password').value = response.password;
+				document.getElementsByName('submit')[0].removeAttribute('disabled')
 				document.getElementsByName('submit')[0].click();
 			}
 			else{
