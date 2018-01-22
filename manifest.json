@@ -9,7 +9,6 @@
     "http://enet.10000.gd.cn:10001/", 
     "http://jwxt.sustc.edu.cn/",
     "storage",
-    "background",
     "tabs"],
 "browser_action": {
     "default_title": "CAS Login",
