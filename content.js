@@ -18,15 +18,17 @@ chrome.runtime.sendMessage({
             chrome.runtime.sendMessage({
                 command: "close"
             });
-        } else if (document.URL.indexOf("http://jwxt.sustc.edu.cn/jsxsd/") >= 0) {
-            var table = document.getElementById('dataList');
-            if (table != null) {
-                var a = table.getElementsByTagName('a');
-                for (var i = 0; i < a.length; i++) {
-                    a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)'.*/, "javascript:open('$1');"));
-                }
-            }
-
         }
     }
 });
+
+if (document.URL.indexOf("http://jwxt.sustc.edu.cn/jsxsd/") >= 0) {
+    var table = document.getElementById('dataList');
+    if (table != null) {
+        var a = table.getElementsByTagName('a');
+        for (var i = 0; i < a.length; i++) {
+            a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)'.*/, "javascript:open('$1');"));
+        }
+    }
+
+}
