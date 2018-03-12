@@ -23,12 +23,8 @@ chrome.runtime.sendMessage({
 });
 
 if (document.URL.indexOf("http://jwxt.sustc.edu.cn/jsxsd/") >= 0) {
-    var table = document.getElementById('dataList');
-    if (table != null) {
-        var a = table.getElementsByTagName('a');
-        for (var i = 0; i < a.length; i++) {
-            a.item(i).setAttribute('href', a.item(i).getAttribute('href').replace(/javascript:JsMod\('(.*)'.*/, "javascript:open('$1');"));
-        }
-    }
-
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.text = "window.showModalDialog=function(url){window.open(url)}"
+    document.body.appendChild(script);
 }
