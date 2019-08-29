@@ -9,6 +9,7 @@
     "https://cas.sustech.edu.cn/",
     "http://enet.10000.gd.cn:10001/", 
     "http://jwxt.sustc.edu.cn/",
+    "http://jwxt.sustech.edu.cn/",
     "storage",
     "tabs"],
 "browser_action": {
@@ -36,7 +37,8 @@
     },
     {
         "matches": [
-            "http://jwxt.sustc.edu.cn/*"
+            "http://jwxt.sustc.edu.cn/*",
+            "http://jwxt.sustech.edu.cn/*"
         ],
         "js": ["jwxt_content.js"]
     }
