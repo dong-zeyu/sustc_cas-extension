@@ -1,5 +1,5 @@
-if (document.URL.indexOf("http://jwxt.sustc.edu.cn/jsxsd/") >= 0 ||
-        document.URL.indexOf("http://jwxt.sustech.edu.cn/jsxsd/") >= 0 ) {
+if (document.URL.indexOf("https://jwxt.sustc.edu.cn/jsxsd/") >= 0 ||
+        document.URL.indexOf("https://jwxt.sustech.edu.cn/jsxsd/") >= 0 ) {
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.text = "JsMod = function(url,width,height){\
