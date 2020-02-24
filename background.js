@@ -1,9 +1,9 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request.command == "storage")
+    if (request.command == "cas")
         sendResponse({
-            username: localStorage.getItem('username'),
-            password: localStorage.getItem('password'),
-            auto: localStorage.getItem('autologin')
+            username: localStorage.getItem('cas_usr'),
+            password: localStorage.getItem('cas_pwd'),
+            auto: localStorage.getItem('cas_enable')
         });
     else if (request.command == "mail")
         sendResponse({
@@ -31,9 +31,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 if (localStorage.length != 6) {
     console.log('init...');
-    localStorage.setItem('autologin', false);
-    localStorage.setItem('username', '');
-    localStorage.setItem('password', '');
+    localStorage.setItem('cas_enable', false);
+    localStorage.setItem('cas_usr', '');
+    localStorage.setItem('cas_pwd', '');
 
     localStorage.setItem('mail_enable', false);
     localStorage.setItem('mail_usr', '');

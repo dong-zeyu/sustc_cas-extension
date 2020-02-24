@@ -1,5 +1,5 @@
 chrome.runtime.sendMessage({
-    command: "storage"
+    command: "cas"
 }, function(response) {
     if (response.auto == 'true') {
         if (document.URL.indexOf("https://cas.sustc.edu.cn/cas/login") < 0 && document.URL.indexOf("https://cas.sustech.edu.cn/cas/login") < 0) {
