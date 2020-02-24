@@ -10,6 +10,7 @@
     "http://enet.10000.gd.cn:10001/", 
     "https://jwxt.sustc.edu.cn/",
     "https://jwxt.sustech.edu.cn/",
+    "https://exmail.qq.com/",
     "storage",
     "tabs"],
 "browser_action": {
@@ -41,6 +42,14 @@
             "https://jwxt.sustech.edu.cn/*"
         ],
         "js": ["jwxt_content.js"]
+    },
+    {
+        "matches": [
+            "https://exmail.qq.com/login*",
+            "https://exmail.qq.com/cgi-bin/loginpage*",
+            "https://mail.sustech.edu.cn/*"
+        ],
+        "js": ["mail_content.js"]
     }
 ]
 }

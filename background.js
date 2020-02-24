@@ -5,6 +5,12 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             password: localStorage.getItem('password'),
             auto: localStorage.getItem('autologin')
         });
+    else if (request.command == "mail")
+        sendResponse({
+            username: localStorage.getItem("mail_usr"),
+            password: localStorage.getItem("mail_pwd"),
+            auto: localStorage.getItem('mail_enable')
+        })
     else if (request.command == "close")
         chrome.tabs.getAllInWindow(function(tab) {
             var target_tab;
@@ -23,9 +29,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             }
         });
 });
-if (localStorage.length != 3) {
+if (localStorage.length != 6) {
     console.log('init...');
     localStorage.setItem('autologin', false);
     localStorage.setItem('username', '');
     localStorage.setItem('password', '');
+
+    localStorage.setItem('mail_enable', false);
+    localStorage.setItem('mail_usr', '');
+    localStorage.setItem('mail_pwd', '');
 }
