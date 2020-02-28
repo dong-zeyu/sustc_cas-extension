@@ -31,6 +31,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 if (localStorage.length != 6) {
     console.log('init...');
+    localStorage.clear();
     localStorage.setItem('cas_enable', false);
     localStorage.setItem('cas_usr', '');
     localStorage.setItem('cas_pwd', '');
